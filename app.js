@@ -20,6 +20,36 @@ console.log(plus15(10));
 
 
 // Exercise 2 Section
+
+let users = [
+  {
+    name: "Frodo",
+    age: 50,
+    score: 85,
+    isActive: false,
+  },
+  {
+    name: "Sam",
+    age: 38,
+    score: 94,
+    isActive: true,
+  },
+  {
+    name: "Merry",
+    age: 36,
+    score: 82,
+    isActive: true,
+  },
+  {
+    name: "Pippin",
+    age: 26,
+    score: 77,
+    isActive: false,
+  },
+];
+
+
+
 console.log("EXERCISE 2:\n==========\n");
 
 users.forEach(function (param) {
@@ -30,11 +60,15 @@ users.forEach(function (param) {
 
 
 // Exercise 3 Section
+
+
 console.log("EXERCISE 3:\n==========\n");
 
 let userScore = users.map(function (user) {
   return { name: user.name, score: user.score };
 });
+
+console.log(userScore)
 
 //Places this new object initialization onto every object in the array
 //in order to create new objects with the desired info.
@@ -44,9 +78,9 @@ let userScore = users.map(function (user) {
 // Exercise 4 Section
 console.log("EXERCISE 4:\n==========\n");
 
+
 let active = users.filter(active => active.isActive !== false)
 //Goes through and checks which values meet the condition.
-
 
 console.log(active)
 
@@ -56,7 +90,7 @@ console.log(active)
 // Exercise 5 Section
 console.log("EXERCISE 5:\n==========\n");
 
-let sorted = users.sort((a,b) => users[0].score - users[1].score);
+let sorted = users.sort((a,b) => b.score - a.score);
 //Passes through and subtracts the scores from each other. + or - determines
 //order.
 
